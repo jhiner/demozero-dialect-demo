@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div#main.pure-g
+    div#index.pure-u-1.l-box
+      h1= title
+      br
+      #msg
+      p
+        button#signinButton.pure-button.pure-button-primary(onclick="signIn()") Login
+      code
+        /authorize?audience=http://corp.billing.api&scope=create:invoice read:invoice&client_id=...
+      script.
+        console.log('loaded')
